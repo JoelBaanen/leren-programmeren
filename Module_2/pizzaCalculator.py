@@ -10,6 +10,8 @@ prijs_medium = vraag_medium * 9.99
 prijs_large = vraag_large * 12.99
 
 totaal_prijs = prijs_large + prijs_medium + prijs_small
+totaal_prijs = round(totaal_prijs, 2)
+
 print("-----------------------------------------")
 print("| Prijs : €", totaal_prijs)
 print("| Voor : kleine pizzas;", vraag_small,"medium pizzas;", vraag_medium,"large pizzas;", vraag_large,)
