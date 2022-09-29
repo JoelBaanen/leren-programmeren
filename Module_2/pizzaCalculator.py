@@ -14,5 +14,5 @@ totaal_prijs = round(totaal_prijs, 2)
 
 print("-----------------------------------------")
 print("| Prijs : €", totaal_prijs)
-print("| Voor : kleine pizzas;", vraag_small,"medium pizzas;", vraag_medium,"large pizzas;", vraag_large,)
+print("| Voor : ", vraag_small,"kleine pizzas;", vraag_medium,"medium pizzas;", vraag_large,"large pizzas;")
 print("-----------------------------------------")
