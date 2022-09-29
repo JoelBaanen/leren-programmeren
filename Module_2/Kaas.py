@@ -1,6 +1,3 @@
-
-
-
 geelkaas = str(input ("Is de kaas geel?\n"))
 if geelkaas == "ja":
     gatenkaas = str(input("Zitten er gaten er in?\n"))
