@@ -27,7 +27,7 @@ acrobatiek = int(input("Hoeveel jaar doet u acrobatiek?\n"))
 hoed = input("Ben jij in bezit van een hoge hoed?j/n\n")
 gewicht = int(input("Hoeveel weeg je?(kg)\n"))
 lengte = int(input("Hoe lang ben jij?(cm)\n"))
-if (snor_lengte > 10 or haar_lengte > 20) and mbo == "j" and rijbewijs == "j" and (jongleren > 5 or dieren_dressuur > 4 or acrobatiek > 3) and hoed == "j" and (90 < gewicht < 120) and (150 < lengte < 220):
+if (snor_lengte >= 10 or haar_lengte >= 20) and mbo == "j" and rijbewijs == "j" and (jongleren >= 5 or dieren_dressuur >= 4 or acrobatiek >= 3) and hoed == "j" and (90 < gewicht < 120) and (150 < lengte < 220):
     print("Beste", naam)
     print ("Jij voldoet aan alles eisen jij mag een sollicitatie gesprek opvragen.")
 else:
