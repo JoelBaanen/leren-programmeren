@@ -1,4 +1,3 @@
-from re import A
 print("----------------------------------")
 print("-   Sollicitatie gesprek eisen   -")
 print("----------------------------------")
@@ -13,7 +12,7 @@ if gender == "m":
     snor = input("Heeft uw een snor?j/n")
     if snor == "j":
         snor_lengte = int(input("Hoe lang is uw snor?(cm)"))
-if gender == "v":
+elif gender == "v":
     haar_kleur = input("Welke kleur is uw haar?")
     if haar_kleur == "rood":
         gekrulled = input("Is uw haar gekrulled?j/n")
@@ -28,8 +27,6 @@ hoed = input("Ben jij in bezit van een hoge hoed?j/n")
 gewicht = int(input("Hoeveel weeg je?(kg)"))
 lengte = int(input("Hoe lang ben jij?(cm)"))
 if (snor_lengte >= 10 or haar_lengte >= 20) and mbo == "j" and rijbewijs == "j" and (jongleren >= 5 or dieren_dressuur >= 4 or acrobatiek >= 3) and hoed == "j" and (90 < gewicht < 120) and (150 < lengte < 220):
-    print("Beste", naam)
-    print ("Jij voldoet aan alles eisen jij mag een sollicitatie gesprek opvragen.")
-else:
-    print("Beste", naam)  
-    print("Jij voldoet niet aan al onze eisen jij zou niet toegestaan worden. ")
+    print ("Beste", naam, "Jij voldoet aan alles eisen jij mag een sollicitatie gesprek opvragen.")
+else:  
+    print("Beste", naam, "Jij voldoet niet aan al onze eisen jij zou niet toegestaan worden. ")

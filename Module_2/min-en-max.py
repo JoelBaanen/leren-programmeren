@@ -9,10 +9,10 @@ elif a < b:
     min = a
     max = b
     print("a is smaller than b")
-if a == b:
-    print("The values are equal")
 else:
-    print("The minimum is :", min)
-    print("The maximum is :", max)
+    print("The values are equal")
+
+print("The minimum is :", min)
+print("The maximum is :", max)
 
 
