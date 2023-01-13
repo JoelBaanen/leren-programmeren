@@ -7,17 +7,23 @@ print("- voldoet en vraagt ook wat      -")
 print("- vragen over jouw               -")
 print("----------------------------------")
 naam = input("Wat is jouw naam?(voor)")
+if naam == "Joel":
+    print("Hoe gaat alles vandaag?")
 gender = input("Bent u een man of een vrouw?m/v\n")
 if gender == "m":
     snor = input("Heeft uw een snor?j/n")
     if snor == "j":
         snor_lengte = int(input("Hoe lang is uw snor?(cm)"))
+    if snor == "n":
+        whysnor = input("Why?")
 elif gender == "v":
     haar_kleur = input("Welke kleur is uw haar?")
     if haar_kleur == "rood":
         gekrulled = input("Is uw haar gekrulled?j/n")
         if gekrulled == "j":
             haar_lengte = int(input ("Hoe lang is uw haar?(cm)"))
+    if haar_kleur == "blauw":
+        print("Ben je emo?")
 mbo = input("Heb jij een MBO-4 diploma voor ondernemen?j/n")
 rijbewijs = input("Heb jij een vrachtwagen rijbewijs?j/n")
 jongleren = int(input("Hoeveel jaar jongleert u?"))
