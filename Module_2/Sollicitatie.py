@@ -6,6 +6,8 @@ print("- checkt of jij aan alle eisen   -")
 print("- voldoet en vraagt ook wat      -")
 print("- vragen over jouw               -")
 print("----------------------------------")
+snorlengte = ""
+haarlengte = ""
 naam = input("Wat is jouw naam?(voor)")
 if naam == "Joel":
     print("Hoe gaat alles vandaag?")
