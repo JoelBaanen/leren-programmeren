@@ -116,7 +116,7 @@ if kasteel_ingang_keuze == 2:
         next_stage = True
 if next_stage == True:
     print("Jij bevindt jezelf voor de koning van het kasteel die jij nu moet vechten.")
-    boss_vijand_hp = 200
+boss_vijand_hp = 200
 while True:
     move_keuze = int(input("Welke move ga jij doen? 1/2"))
     if move_keuze == 1:

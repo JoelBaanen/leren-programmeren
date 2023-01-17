@@ -3,16 +3,16 @@ import random
 name = input("Wat is jouw naam?")
 print('Hallo', name)
 
-favoriteSeason = input('Wat is jouw favorite seizoen? A) Lente, B) Zomer, C) Herfst of D) Winter')
-answer = favoriteSeason.lower()
+favoriteSeason = input('Wat is jouw favorite seizoen? A) Lente, B) Zomer, C) Herfst of D) Winter').lower()
 
-if answer == 'a':
+
+if favoriteSeason == 'a':
     print("Ik hou ook van de lente!")
-elif answer == 'b':
+elif favoriteSeason == 'b':
     print("De zomer is voor mij te warm.")
-elif answer == 'c':
+elif favoriteSeason == 'c':
     print("Mooi he, al die blaadjes die dan van de boom vallen.")
-elif answer == 'd':
+elif favoriteSeason == 'd':
     print("Is de winter niet erg koud?")
 else:
     print("Die ken ik niet...")
