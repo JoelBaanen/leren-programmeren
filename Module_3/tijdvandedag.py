@@ -1,6 +1,7 @@
-for x in range(24):
-    if x <= 12:
+
+for x in range(25):
+    if 1 <= x <= 12:
         print(x,"am")
-    elif x <= 24:
+    elif x >= 12:
         x -= 12
         print(x,"pm")

@@ -23,7 +23,7 @@ win_msg = "You have defeated the enemy"
 soldaat_tekst = """Jij wordt wakker in de midden van een grote hal met 
 een zittende soldaat aan het einde voor een deur."""
 print(soldaat_tekst)
-soldaat_relatie = int(input ("Wat doe jij met het soldaat? 1 - Probeer jij langs te gaan of 2 - probeer jij met hem te praten?"))
+soldaat_relatie = int(input ("Wat doe jij met de soldaat? 1 - Probeer jij langs te gaan of 2 - probeer jij met hem te praten?"))
 if soldaat_relatie == 1:
     print("Hij wilt niet dat jij langs gaat zomaar dus hij begint een duel met jou.")
     while True:
@@ -58,36 +58,17 @@ if next_stage == True:
     next_stage = False
     print("Jij volgt een pad tot jij aan het ingang van een kasteel terecht komt.")
     kasteel_ingang_keuze = int(input("Hoe ga jij in het kasteel? 1 - main ingang of 2 - side ingang?"))
-    if kasteel_ingang_keuze == 1:
-        vijand_hp = 30
-        vijand_dmg = 15
-        print("Jij komt een groep van 3 kleine soldaten tegen en zij gaan je vechten.")
-while True:
-    move_keuze = int(input("Welke move ga jij doen?1/2"))
-    if move_keuze == 1:
-        vijand_hp = vijand_hp - karakter_dmg
-        if 0 >= vijand_hp:
-            print("Jij hebt ze verslaan.")
-            next_stage = True
-            break
-        elif 10 >= vijand_hp:
-             print("Er is nog een soldaat over.")
-             vijand_dmg = 5
-        elif 20 >= vijand_hp:
-            print("Jij hebt een soldaat verslaan.")
-            vijand_dmg = 10
-        else:
-            print(fout_melding)
-    elif move_keuze == 2:
-        move_hit = bool(random.randint(0,1))
-        if move_hit == 1:
-            vijand_hp = vijand_hp - (karakter_dmg * 2)
-                
+if kasteel_ingang_keuze == 1:
+    vijand_hp = 30
+    vijand_dmg = 15
+    print("Jij komt een groep van 3 kleine soldaten tegen en zij gaan met je vechten.")
+    while True:
+        move_keuze = int(input("Welke move ga jij doen?1/2"))
+        if move_keuze == 1:
+            vijand_hp = vijand_hp - karakter_dmg
             if 0 >= vijand_hp:
                 print("Jij hebt ze verslaan.")
                 next_stage = True
-                karakter_hp = 200
-                karakter_dmg = 20
                 break
             elif 10 >= vijand_hp:
                 print("Er is nog een soldaat over.")
@@ -97,17 +78,36 @@ while True:
                 vijand_dmg = 10
             else:
                 print(fout_melding)
-        elif  move_hit == 0:
-            print(miss)
-    else:
-        print(fout_melding)
-    if 0 > karakter_hp:
-        print("You died you must start again.")
-    karakter_hp = karakter_hp - vijand_dmg
-    print("jij wordt gehit voor", vijand_dmg,"Jij hebt",karakter_hp,"hp nog over")
-if kasteel_ingang_keuze == 2:
+        elif move_keuze == 2:
+            move_hit = bool(random.randint(0,1))
+            if move_hit == 1:
+                vijand_hp = vijand_hp - (karakter_dmg * 2)
+                    
+                if 0 >= vijand_hp:
+                    print("Jij hebt ze verslaan.")
+                    next_stage = True
+                    karakter_hp = 200
+                    karakter_dmg = 20
+                    break
+                elif 10 >= vijand_hp:
+                    print("Er is nog een soldaat over.")
+                    vijand_dmg = 5
+                elif 20 >= vijand_hp:
+                    print("Jij hebt een soldaat verslaan.")
+                    vijand_dmg = 10
+                else:
+                    print(fout_melding)
+            elif  move_hit == 0:
+                print(miss)
+        else:
+            print(fout_melding)
+        if 0 > karakter_hp:
+            print("You died you must start again.")
+        karakter_hp = karakter_hp - vijand_dmg
+        print("jij wordt gehit voor", vijand_dmg,"Jij hebt",karakter_hp,"hp nog over")
+elif kasteel_ingang_keuze == 2:
     next_stage = False
-    kist_keuze = input("Jij vindt een kist in het kasteel. Wat doe jij dermee? open/negeer")
+    kist_keuze = input("Jij vindt een kist in het kasteel. Wat doe jij ermee? open/negeer")
     if kist_keuze == "open":
         karakter_hp = 400
         print("jij vindt een set van sterke armor.")
