@@ -1,5 +1,5 @@
-aantal = int
-for x in range(aantal):
+aantal = 1
+vraag = True
     vraag = input("?")
     if  vraag == "quit":
         print(aantal)
