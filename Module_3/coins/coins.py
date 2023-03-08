@@ -20,24 +20,34 @@ if change > 0: #
 # comment on code below: 
     if coinValue == 500:
       coinValue = 200
+      nrCoinsReturned500 = nrCoinsReturned
     elif coinValue == 200:
       coinValue = 100  
+      nrCoinsReturned200 = nrCoinsReturned
     elif coinValue == 100:
       coinValue = 50
+      nrCoinsReturned100 = nrCoinsReturned
     elif coinValue == 50:
       coinValue = 20
+      nrCoinsReturned50 = nrCoinsReturned
     elif coinValue == 20:
       coinValue = 10
+      nrCoinsReturned20 = nrCoinsReturned
     elif coinValue == 10:
       coinValue = 5
+      nrCoinsReturned10 = nrCoinsReturned
     elif coinValue == 5:
       coinValue = 2
+      nrCoinsReturned5 = nrCoinsReturned
     elif coinValue == 2:
       coinValue = 1
+      nrCoinsReturned2 = nrCoinsReturned
     else:
       coinValue = 0
+      nrCoinsReturned1 = nrCoinsReturned
 
 if change > 0: #
   print('Change not returned: ', str(change) + "cents")
 else:
   print('done')
+  print(nrCoinsReturned500,"x 500 cents",nrCoinsReturned200,"x 200 cents",nrCoinsReturned100,"x 100 cents",nrCoinsReturned50,"x 50 cents",nrCoinsReturned20,"x 20 cents",nrCoinsReturned10,"x 10 cents",nrCoinsReturned5,"x 5 cents",nrCoinsReturned2,"x 2 cents",nrCoinsReturned1,"x 1 cent" )
