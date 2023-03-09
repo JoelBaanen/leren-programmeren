@@ -8,4 +8,12 @@ while loop == True:
     if product == lijst:
         lijst[product] += aantal
     else:
-        lijst.update({lijst[product]})
+        lijst.update({product:aantal})
+    quit = input("typ Stop als je wilt stoppen.")
+    if quit == "stop":
+        loop = False
+print("----------------------------")
+print('')
+print(lijst)
+print('')
+print("-----------------------------")
