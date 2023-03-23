@@ -1,4 +1,7 @@
 dagen = ['maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag','zondag']
+for x in range(0,7):
+    print(dagen[x])
+print('')
 for x in range (0,5):
     print(dagen[x])
 print('')
