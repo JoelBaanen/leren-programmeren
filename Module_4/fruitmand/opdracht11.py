@@ -8,7 +8,7 @@ nietrond = 0
 while not loop:
     keuzekleur = input("Geef een kleur op: ").lower()
     for x in fruitmand:
-        if keuzekleur == x['colour']:
+        if keuzekleur == x['color']:
             if x['round']:
                 round += 1
             else:
