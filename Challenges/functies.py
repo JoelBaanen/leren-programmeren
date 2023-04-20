@@ -33,10 +33,11 @@ def getFileContentAsString(textFile: str) -> str:
 
 # opdracht 1
 def getNumberOfCharacters(text: str) -> int:
-    only_characters = text.replace('.','')
-    only_characters = only_characters.replace('?','')
-    only_characters = only_characters.replace('!','')
-    return len(only_characters)
+    count = 0
+    for characters in text:
+        if characters in ALLOWED_IN_WORD:
+            count += 1
+    return count 
 
 
 # opdracht 2
