@@ -51,11 +51,8 @@ def getNumberOfWords(text: str) -> int:
     return len(text.split()) 
 
 def avi_score(text: str ) -> int:
-    words = getNumberOfWords(text)
-    sentences = getNumberOfSentences(text)
-
-    gemiddelde = ceil((words + sentences) / 2)
-
+    gemiddelde = getNumberOfWords(text)/getNumberOfSentences(text)
+    gemiddelde = round(gemiddelde,0)
     if gemiddelde <= 7:
         avi = 5
     elif gemiddelde == 8:
