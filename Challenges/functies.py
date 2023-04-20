@@ -1,3 +1,4 @@
+from math import ceil
 EASY_TEXT = """Ik hou van programmeren. Programmeren is leuk. 
 Ik kan veel dingen maken met programmeren. Ik kan een website maken. 
 Ik kan een spel maken. Ik kan een chatbot maken. 
@@ -32,13 +33,38 @@ def getFileContentAsString(textFile: str) -> str:
 
 # opdracht 1
 def getNumberOfCharacters(text: str) -> int:
-    return 0
+    only_characters = text.replace('.','')
+    only_characters = only_characters.replace('?','')
+    only_characters = only_characters.replace('!','')
+    return len(only_characters)
 
 
 # opdracht 2
-def getNumberOfSentences(text: str) -> int:
-    return 0
-
+def getNumberOfSentences(text: str) -> int: 
+    sentences_total = text.count('.')
+    sentences_total += text.count('?')
+    sentences_total += text.count('!')
+    return sentences_total
 # opdracht 3
 def getNumberOfWords(text: str) -> int:
-    return 0
+    return len(text.split()) 
+
+def avi_score(text: str ) -> int:
+    words = getNumberOfWords(text)
+    sentences = getNumberOfSentences(text)
+
+    gemiddelde = ceil((words + sentences) / 2)
+
+    if gemiddelde <= 7:
+        avi = 5
+    elif gemiddelde == 8:
+        avi = 6
+    elif gemiddelde == 9:
+        avi = 7
+    elif gemiddelde == 10:
+        avi = 8
+    elif gemiddelde == 11:
+        avi = 11
+    elif gemiddelde > 11:
+        avi = 12
+    return avi
