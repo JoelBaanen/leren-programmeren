@@ -1,2 +1,4 @@
 To Do:
-fruitmand opdracht 10 - af maken
+cjv 14a doen
+lootjes daarna beginnen
+javascript cjv doen 
