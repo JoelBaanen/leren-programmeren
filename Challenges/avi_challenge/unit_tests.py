@@ -17,13 +17,13 @@ else:
 # schrijf zelf nog een extra testen voor getNumberOfSentences (gebruik test.txt).
 
 # test 3: getNumberOfWords
-print(getNumberOfWords(getText('data\difficult1.txt')))
-if getNumberOfWords(getText('data\difficult1.txt')) == 82:
+print(getNumberOfWords(getText('difficult1.txt')))
+if getNumberOfWords(getText('difficult1.txt')) == 82:
     print("Test geslaagd 3")
 else:
     print("Deze test is niet geslaagd")
 
-if getNumberOfWords(getText('data\easy1.txt')) == 11:
+if getNumberOfWords(getText('easy1.txt')) == 11:
     print("Test geslaagd 4")
 else:
     print("Deze test is niet geslaagd")

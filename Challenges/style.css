@@ -1,0 +1,54 @@
+/* zet eerst alle tags op 0 */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* Definieer hier de breedte van je image */
+img{
+    width: 400px;
+}
+
+/* Definieer de grid-container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 960px;
+  margin: 50px auto
+}
+
+/* Definieer de inhoud van de eerste kolom */
+.column1 {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+/* Definieer de inhoud van de tweede kolom */
+.column2 {
+  background-color: #dcdcdc;
+  padding: 10px;
+  position: relative;
+}
+
+/* Definieer de inhoud van de eerste rij in de tweede kolom */
+.row1 {
+  background-color: #b0e0e6;
+  padding: 10px;
+}
+
+/* Definieer de inhoud van de tweede rij in de tweede kolom */
+.row2 {
+    margin-top: 20px;
+    background-color: #87ceeb;
+    padding: 10px;
+}
+
+/* Definieer de inhoud van de derde rij in de tweede kolom */
+.row3 {
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    background-color: #00bfff;
+    padding: 10px;
+}
