@@ -39,7 +39,6 @@ def getNumberOfCharacters(text: str) -> int:
             count += 1
     return count 
 
-
 # opdracht 2
 def getNumberOfSentences(text: str) -> int: 
     sentences_total = text.count('.')
